@@ -1,3 +1,7 @@
+:root {
+	--custom-blue: #45567d;
+}
+
 *, *::before, *::after {
 	margin: 0;
 	padding: 0;
@@ -10,7 +14,6 @@ body {
 	color: white;
 	line-height: 1.4;
 }
-
 
 #navbar {
 	width: 100%;
@@ -30,7 +33,7 @@ body {
 
 .nav-link {
 	display: block;
-	padding: 2rem;
+	padding: 20px;
 }
 
 a {
@@ -39,7 +42,7 @@ a {
 }
 
 .nav-link:hover {
-	background-color: #45567d;
+	background-color: var(--custom-blue);
 }
 
 #welcome-section {
@@ -62,13 +65,41 @@ a {
 #projects {
 	height: 100vh;
 	padding: 10rem 2rem;
-	background-color: #45567d;
+	background-color: var(--custom-blue);
 }
 
 #projects h2 {
 	margin: 0 auto 6rem auto;
 	max-width: 640px;
 	border-bottom: solid white;
+}
+
+#projects-grid {
+	display: block;
+	width: 100%;
+	max-width: 1280px;
+	margin: 0 auto 60px auto;
+	display: grid;
+	grid-gap: 40px;
+	grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+}
+
+.project {
+	border-radius: 20px;
+}
+
+#project-img {
+	display: block;
+	height: calc(100% - 68px);
+	width: 100%;
+	object-fit: cover;
+}
+
+#project-title {
+	background-color: #303841;
+	text-align: center;
+	padding: 20px 5px;
+	font-size: 20px;
 }
 
 #contact {
